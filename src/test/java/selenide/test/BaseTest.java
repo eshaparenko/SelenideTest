@@ -1,7 +1,7 @@
 package selenide.test;
 
-import com.codeborne.selenide.Configuration;
 import org.testng.annotations.BeforeTest;
+import utils.BrowserFactory;
 import utils.Constants;
 
 import static com.codeborne.selenide.Selenide.open;
@@ -12,8 +12,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class BaseTest {
     @BeforeTest
     public void Before(){
-        System.setProperty("webdriver.chrome.driver", "src\\test\\driverLocation\\chromedriver.exe");
-        Configuration.browser = "chrome";
+        BrowserFactory.Create(Constants.BROWSER);
         open(Constants.APP_URL);
     }
 }
