@@ -1,0 +1,14 @@
+<suite name="Suite1" verbose="1">
+    <test name="test1">
+        <groups>
+            <run>
+                <include name="book"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="tests.BaseTest"/>
+            <class name="tests.BookTest"/>
+        </classes>
+    </test>
+</suite>

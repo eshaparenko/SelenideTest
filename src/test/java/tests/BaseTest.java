@@ -1,4 +1,4 @@
-package selenide.test;
+package tests;
 
 import org.testng.annotations.BeforeTest;
 import utils.BrowserFactory;
