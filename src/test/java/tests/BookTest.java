@@ -10,15 +10,15 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class BookTest extends BaseTest {
+
     @Test(groups = {"book"})
     public void goToChapterTest(){
-        //BrowserFactory.Create(Constants.BROWSER);
-        //open(Constants.APP_URL);
         Pages.mainPage.goToChapter(Chapters.chapter1);
         Pages.chapter1.isPageOpened();
         Pages.chapter1.goToMainPage();
         Pages.mainPage.isPageOpened();
     }
+
     @Test(groups = {"base"})
     public void simpleTest(){
         System.out.println("base");
